@@ -506,7 +506,7 @@ main:
     url: watchdog/impact_analysis/
     identifier: watchdog_impact_analysis
     parent: watchdog_top_level
-    weight: 1 
+    weight: 1
   - name: RCA
     url: watchdog/rca/
     identifier: watchdog_rca
@@ -4382,6 +4382,18 @@ api:
       unstable:
         - v2
       order: 4
+  - name: Estimate Output Series - Public v2 API
+    url: '#estimate-output-series-public-v2-api'
+    identifier: estimate-output-series-public-v2-api
+    parent: metrics
+    generated: true
+    params:
+      versions:
+        - v2
+      operationids:
+        - EstimateMetricsOutputSeries
+      unstable: []
+      order: 10
   - name: List tags by metric name
     url: '#list-tags-by-metric-name'
     identifier: list-tags-by-metric-name

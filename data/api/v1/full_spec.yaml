@@ -6222,8 +6222,7 @@ components:
           type: boolean
         silenced:
           additionalProperties:
-            description: UTC epoch timestamp in seconds when the downtime for the
-              group expires.
+            description: ID of the downtime applied to the monitor.
             format: int64
             nullable: true
             type: integer
