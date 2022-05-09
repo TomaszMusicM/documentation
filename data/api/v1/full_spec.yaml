@@ -17688,6 +17688,7 @@ paths:
         type: safe
   /api/v1/daily_custom_reports:
     get:
+      deprecated: true
       description: Get daily custom reports.
       operationId: GetDailyCustomReports
       parameters:
@@ -17753,6 +17754,7 @@ paths:
         If you have any feedback, contact [Datadog support](https://docs.datadoghq.com/help/).'
   /api/v1/daily_custom_reports/{report_id}:
     get:
+      deprecated: true
       description: Get specified daily custom reports.
       operationId: GetSpecifiedDailyCustomReports
       parameters:
@@ -23709,6 +23711,7 @@ paths:
         type: idempotent
   /api/v1/monthly_custom_reports:
     get:
+      deprecated: true
       description: Get monthly custom reports.
       operationId: GetMonthlyCustomReports
       parameters:
@@ -23774,6 +23777,7 @@ paths:
         If you have any feedback, contact [Datadog support](https://docs.datadoghq.com/help/).'
   /api/v1/monthly_custom_reports/{report_id}:
     get:
+      deprecated: true
       description: Get specified monthly custom reports.
       operationId: GetSpecifiedMonthlyCustomReports
       parameters:
@@ -27379,6 +27383,7 @@ paths:
         type: safe
   /api/v1/usage/attribution:
     get:
+      deprecated: true
       description: Get Usage Attribution.
       operationId: GetUsageAttribution
       parameters:
