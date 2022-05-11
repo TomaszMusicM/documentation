@@ -18,7 +18,7 @@ If you are running Agent 5.3+, you can send necessary troubleshooting informatio
 
 The Datadog Agent is completely open source, which allows you to [verify the code's behavior][1]. If needed, the flare can be reviewed prior to sending since the flare prompts a confirmation before uploading it.
 
-In the commands below, replace `<CASE_ID>` with your Datadog support case ID if you have one, then enter the email address associated with it.
+In the commands below, replace `<808521>` with your Datadog support case ID if you have one, then enter the email address associated with it.
 
 If you don't have a case ID, just enter your email address used to login in Datadog to create a new support case.
 
@@ -27,19 +27,19 @@ If you don't have a case ID, just enter your email address used to login in Data
 
 | Platform   | Command                                                 |
 |------------|---------------------------------------------------------|
-| AIX        | `datadog-agent flare <CASE_ID>`                         |
-| Docker     | `docker exec -it dd-agent agent flare <CASE_ID>`        |
-| macOS      | `datadog-agent flare <CASE_ID>` or via the [web GUI][1] |
-| CentOS     | `sudo datadog-agent flare <CASE_ID>`                    |
-| Debian     | `sudo datadog-agent flare <CASE_ID>`                    |
-| Kubernetes | `kubectl exec <POD_NAME> -it agent flare <CASE_ID>`     |
-| Fedora     | `sudo datadog-agent flare <CASE_ID>`                    |
-| Redhat     | `sudo datadog-agent flare <CASE_ID>`                    |
-| Suse       | `sudo datadog-agent flare <CASE_ID>`                    |
-| Source     | `sudo datadog-agent flare <CASE_ID>`                    |
+| AIX        | `datadog-agent flare <808521>`                         |
+| Docker     | `docker exec -it dd-agent agent flare <808521>`        |
+| macOS      | `datadog-agent flare <808521>` or via the [web GUI][1] |
+| CentOS     | `sudo datadog-agent flare <808521>`                    |
+| Debian     | `sudo datadog-agent flare <808521>`                    |
+| Kubernetes | `kubectl exec <POD_NAME> -it agent flare <808521>`     |
+| Fedora     | `sudo datadog-agent flare <808521>`                    |
+| Redhat     | `sudo datadog-agent flare <808521>`                    |
+| Suse       | `sudo datadog-agent flare <808521>`                    |
+| Source     | `sudo datadog-agent flare <808521>`                    |
 | Windows    | Consult the dedicated [Windows documentation][2]        |
 | Heroku     | Consult the dedicated [Heroku documentation][3]         |
-| PCF     | `sudo /var/vcap/jobs/dd-agent/packages/dd-agent/bin/agent/agent flare <CASE_ID>`             |
+| PCF     | `sudo /var/vcap/jobs/dd-agent/packages/dd-agent/bin/agent/agent flare <808521>`             |
 
 ## Dedicated containers
 
@@ -55,25 +55,25 @@ To get a flare from each container, run the following commands:
 ### Agent
 
 ```bash
-kubectl exec -it <AGENT_POD_NAME> -c agent -- agent flare <CASE_ID>
+kubectl exec -it <AGENT_POD_NAME> -c agent -- agent flare <808521>
 ```
 
 ### Process Agent
 
 ```bash
-kubectl exec -it <AGENT_POD_NAME> -c process-agent -- agent flare <CASE_ID> --local
+kubectl exec -it <AGENT_POD_NAME> -c process-agent -- agent flare <808521> --local
 ```
 
 ### Trace Agent
 
 ```bash
-kubectl exec -it <AGENT_POD_NAME> -c trace-agent -- agent flare <CASE_ID> --local
+kubectl exec -it <AGENT_POD_NAME> -c trace-agent -- agent flare <808521> --local
 ```
 
 ### Security Agent
 
 ```bash
-kubectl exec -it <AGENT_POD_NAME> -c security-agent -- security-agent flare <CASE_ID>
+kubectl exec -it <AGENT_POD_NAME> -c security-agent -- security-agent flare <808521>
 ```
 
 ### System probe
