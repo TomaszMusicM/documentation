@@ -27,19 +27,19 @@ If you don't have a case ID, just enter your email address used to login in Data
 
 | Platform   | Command                                                 |
 |------------|---------------------------------------------------------|
-| AIX        | `datadog-agent flare <CASE_ID>`                         |
-| Docker     | `docker exec -it dd-agent agent flare <CASE_ID>`        |
-| macOS      | `datadog-agent flare <CASE_ID>` or via the [web GUI][1] |
-| CentOS     | `sudo datadog-agent flare <CASE_ID>`                    |
-| Debian     | `sudo datadog-agent flare <CASE_ID>`                    |
-| Kubernetes | `kubectl exec <POD_NAME> -it agent flare <CASE_ID>`     |
-| Fedora     | `sudo datadog-agent flare <CASE_ID>`                    |
-| Redhat     | `sudo datadog-agent flare <CASE_ID>`                    |
-| Suse       | `sudo datadog-agent flare <CASE_ID>`                    |
-| Source     | `sudo datadog-agent flare <CASE_ID>`                    |
+| AIX        | `datadog-agent flare <808521>`                         |
+| Docker     | `docker exec -it dd-agent agent flare <808521>`        |
+| macOS      | `datadog-agent flare <808521>` or via the [web GUI][1] |
+| CentOS     | `sudo datadog-agent flare <808521>`                    |
+| Debian     | `sudo datadog-agent flare <808521>`                    |
+| Kubernetes | `kubectl exec <POD_NAME> -it agent flare <808521>`     |
+| Fedora     | `sudo datadog-agent flare <808521>`                    |
+| Redhat     | `sudo datadog-agent flare <808521>`                    |
+| Suse       | `sudo datadog-agent flare <808521>`                    |
+| Source     | `sudo datadog-agent flare <808521>`                    |
 | Windows    | Consult the dedicated [Windows documentation][2]        |
 | Heroku     | Consult the dedicated [Heroku documentation][3]         |
-| PCF     | `sudo /var/vcap/jobs/dd-agent/packages/dd-agent/bin/agent/agent flare <CASE_ID>`             |
+| PCF     | `sudo /var/vcap/jobs/dd-agent/packages/dd-agent/bin/agent/agent flare <808521>`             |
 
 ## Dedicated containers
 
@@ -55,25 +55,25 @@ To get a flare from each container, run the following commands:
 ### Agent
 
 ```bash
-kubectl exec -it <AGENT_POD_NAME> -c agent -- agent flare <CASE_ID>
+kubectl exec -it <AGENT_POD_NAME> -c agent -- agent flare <808521>
 ```
 
 ### Process Agent
 
 ```bash
-kubectl exec -it <AGENT_POD_NAME> -c process-agent -- agent flare <CASE_ID> --local
+kubectl exec -it <AGENT_POD_NAME> -c process-agent -- agent flare <808521> --local
 ```
 
 ### Trace Agent
 
 ```bash
-kubectl exec -it <AGENT_POD_NAME> -c trace-agent -- agent flare <CASE_ID> --local
+kubectl exec -it <AGENT_POD_NAME> -c trace-agent -- agent flare <808521> --local
 ```
 
 ### Security Agent
 
 ```bash
-kubectl exec -it <AGENT_POD_NAME> -c security-agent -- security-agent flare <CASE_ID>
+kubectl exec -it <AGENT_POD_NAME> -c security-agent -- security-agent flare <808521>
 ```
 
 ### System probe
@@ -93,7 +93,7 @@ aws ecs execute-command --cluster <CLUSTER_NAME> \
     --task <TASK_ID> \
     --container datadog-agent \
     --interactive \
-    --command "agent flare <CASE_ID>"
+    --command "agent flare <808521>"
 ```
 
 **Note:** ECS Exec can only be enabled for new tasks. Existing tasks need to be recreated in order to use ECS Exec.
@@ -108,15 +108,15 @@ aws ecs execute-command --cluster <CLUSTER_NAME> \
 
 | Platform   | Command                                                                 |
 |------------|-------------------------------------------------------------------------|
-| Docker     | `docker exec -it dd-agent /etc/init.d/datadog-agent flare <CASE_ID>`    |
-| macOS      | `datadog-agent flare <CASE_ID>`                                         |
-| CentOS     | `sudo service datadog-agent flare <CASE_ID>`                            |
-| Debian     | `sudo service datadog-agent flare <CASE_ID>`                            |
-| Kubernetes | `kubectl exec <POD_NAME> -it /etc/init.d/datadog-agent flare <CASE_ID>` |
-| Fedora     | `sudo service datadog-agent flare <CASE_ID>`                            |
-| Redhat     | `sudo service datadog-agent flare <CASE_ID>`                            |
-| SUSE       | `sudo service datadog-agent flare <CASE_ID>`                            |
-| Source     | `sudo ~/.datadog-agent/bin/agent flare <CASE_ID>`                       |
+| Docker     | `docker exec -it dd-agent /etc/init.d/datadog-agent flare <808521>`    |
+| macOS      | `datadog-agent flare <808521>`                                         |
+| CentOS     | `sudo service datadog-agent flare <808521>`                            |
+| Debian     | `sudo service datadog-agent flare <808521>`                            |
+| Kubernetes | `kubectl exec <POD_NAME> -it /etc/init.d/datadog-agent flare <808521>` |
+| Fedora     | `sudo service datadog-agent flare <808521>`                            |
+| Redhat     | `sudo service datadog-agent flare <808521>`                            |
+| SUSE       | `sudo service datadog-agent flare <808521>`                            |
+| Source     | `sudo ~/.datadog-agent/bin/agent flare <808521>`                       |
 | Windows    | Consult the dedicated [Windows documentation][1]                        |
 
 **Note**: If you are using a Linux based system and the `service` wrapper command is not available, [consult the list of alternatives][2].
@@ -129,7 +129,7 @@ aws ecs execute-command --cluster <CLUSTER_NAME> \
 
 | Platform   | Command                                                             |
 |------------|---------------------------------------------------------------------|
-| Kubernetes | `kubectl exec <POD_NAME> -it datadog-cluster-agent flare <CASE_ID>` |
+| Kubernetes | `kubectl exec <POD_NAME> -it datadog-cluster-agent flare <808521>` |
 
 {{% /tab %}}
 {{< /tabs >}}
